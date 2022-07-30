@@ -36,3 +36,30 @@
 //endfirst
 
 
+//second
+List<string> allStrings = new List<string>();
+List<string> smallStrings = new List<string>();
+void PrintIntArray(List<string> array, string nameArray="Массив: ")
+{
+    Console.Write(nameArray);
+    for (int i = 0; i < array.Count; i++)
+    {
+        if(array[i] != null)Console.Write(array[i]  + ", ");
+        
+    }
+    Console.WriteLine();
+}   
+
+while(true){
+    Console.Write("Enter strings or q to exit and score: ");
+    string value = Console.ReadLine();
+    if(value == "q")break;
+    if(value.Length < 4)smallStrings.Add(value);
+    allStrings.Add(value);
+}
+
+PrintIntArray(allStrings, "All strings: ");
+PrintIntArray(smallStrings, "Strings length less 4 char: ");
+
+
+//endsecond
